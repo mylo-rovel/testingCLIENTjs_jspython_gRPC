@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service LedManipulationService {
+  rpc StartLedPerformance(TextMessage) returns (TextMessage) {}
+}
+
+message TextMessage {
+    string message = 1;
+}
+
+// protoc -I=. src/proto_files/node_conn.proto \
+//   --js_out=import_style=commonjs:. \
+//   --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
