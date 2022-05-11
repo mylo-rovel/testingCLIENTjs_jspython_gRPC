@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import "./App.css";
 
 //! MODIFY THIS VARIABLE WHEN CONNECTING TO OHER NETWORK
-const LOCAL_MACHINE_IP = "192.168.1.73";
+const LOCAL_MACHINE_IP = "192.168.1.87";
 const ENVOY_PORT = "8080";
 
 const App = () => {
@@ -50,6 +50,7 @@ const App = () => {
 		<>
 			<h1> Iniciador de secuencias de luces LED </h1>
 			<article>
+				<p>{`IP OBJETIVO: ${LOCAL_MACHINE_IP}:${ENVOY_PORT}`}</p>
 				<p>Selecciona la secuencia a iniciar</p>
 				<div>
 					<button onClick={sendSecuenceToApi("secuence1")}>AMARILLO</button>
