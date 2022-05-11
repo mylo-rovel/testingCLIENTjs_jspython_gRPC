@@ -4,14 +4,14 @@ const config_obj = {
 	mode: "development",
 	entry:"./src/index.js",
 	output: {
-		path: path.resolve(__dirname, "public"),
+		path: path.resolve(__dirname, "dist"),
 		publicPath:"/",
 		filename: "bundle.js",
 	},
 	target: "web",
 	devServer: {
 		port:"3000",
-		static: ["./public"],
+		static: ["./dist"],
 		open: true,
 		hot: true,
 		liveReload: true
